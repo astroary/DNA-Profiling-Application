@@ -21,5 +21,5 @@ The application is built around a command-driven menu system:
 * **File I/O**: Each input file is opened and read exactly once to optimize performance.
 
 ---
-**Course:** CS 251: Data Structures, Fall 2021, Prof Pat Troy
+**Course:** CS 251: Data Structures, Spring 2022, Prof Pat Troy
 **Developed By:** Aryansingh Chauhan (astroary)
