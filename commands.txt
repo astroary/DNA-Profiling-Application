@@ -1,0 +1,8 @@
+load_db small.txt
+display
+load_dna 16.txt
+display
+process
+display
+search
+#

@@ -1,0 +1,49 @@
+*********************************************************
+ourvector<i> stats:
+ # of vectors created:   14
+ # of elements inserted: 39
+ # of elements accessed: 57
+*********************************************************
+*********************************************************
+ourvector<6person> stats:
+ # of vectors created:   1
+ # of elements inserted: 3
+ # of elements accessed: 27
+*********************************************************
+*********************************************************
+ourvector<c> stats:
+ # of vectors created:   14
+ # of elements inserted: 222
+ # of elements accessed: 5540
+*********************************************************
+*********************************************************
+ourvector<4gene> stats:
+ # of vectors created:   1
+ # of elements inserted: 3
+ # of elements accessed: 35
+*********************************************************
+
+These stats are created by the following input:
+1. load_db small.txt
+2. load_dna 1.txt
+3. process
+4. display
+5. search
+
+I have declared 2 ourvectors in my int main() named ourvector<person> allPersons and ourvector <gene> allGenes.
+
+The stats for ourvector<person> allPersons is ourvector<6person> stats. When I declared this vector on line 376, 1 vector was created.
+The # of elements inserted are 3 because there are 3 names in the file small.txt (Alice, Bob and Charlie). As for the # of elements accessed there are approximately 27 characters accessed[name,Alice,Bob,Charlie, == 22 characters). 
+
+The stats for ourvector <gene> allGenes is ourvector<4gene> stats. When I declared this vector on line 374 in my code, 1 vector was created.
+The # of elements inserted are 3 because there are 3 gene types in the file small.txt (AGATC,AATG,TATC). As for the # of elements accessed there are approximately 35 elements accessed.
+
+Stats for ourvector<i>:
+Every time we create a person, we are creating 4 new int ourvectors. Each time you load it automatically creates each person another 3 arrays. 
+It is doubled because of copy constructor while loading. So  3 * 2 = 6. 6 + 4(as mentioned earlier 4 new int ourvectors were created) = 10 and plus 1 from line 378 (gene loaded sequence) = 11. During the process function 3 more are added so 11 + 3 = 14 vectors created.
+For the # of elements inserted there are 9 different numbers given in the file small.txt. Multiply the number by 2 because of the copy constructor, so 9 * 2 = 18, then the rest is from process and search function so appropriate 39. For the # of elements accessed there are are an approximate of 57 different gene/dna strands from the file 1.txt.
+
+
+Stats for ourvector<c>:
+Every time we create a gene, we are creating 4 new int ourvectors. Each time you load it automatically creates each person another 3 arrays. 
+It is doubled because of copy constructor while loading. So  3 * 2 = 6. 6 + 4(as mentioned earlier 4 new int ourvectors were created) = 10 and plus 1 from line 380 = 11. During the process function 3 more are added so 11 + 3 = 14 vectors created. As for the # of elements inserted there are a 170 characters of genes in the file 1.txt. Insert 170 genes from 1.txt, insert gene names from small.txt(13 DNA strands times 2 = 26) difference is from ourvector of genes, it automatically creates 4 character vectors and each of the 4 has 4 characters in it so 4 * 4 = 16. So 170 + 26 + 16 = 212 which is an approximate to 222. For the # of elements accessed 3 people times 3 genes = 9. 9 times 4(length AAofTG ) = 36. 36 * 170(length of DNA from 1.txt) = approx 6k.
